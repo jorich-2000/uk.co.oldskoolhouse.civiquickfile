@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/quickfile/settings</path>
+    <page_callback>CRM_Civiquickfile_Form_QuickfileSettings</page_callback>
+    <title>Quickfile Settings</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
