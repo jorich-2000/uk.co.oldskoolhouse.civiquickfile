@@ -1,4 +1,4 @@
-nz.co.fuzion.civixero
+uk.co.oldskoolhouse.civiquickfile
 =====================
 
 Synchronisation between CiviCRM &amp; Quickfile Online Accounts (quickfile.co.uk)
