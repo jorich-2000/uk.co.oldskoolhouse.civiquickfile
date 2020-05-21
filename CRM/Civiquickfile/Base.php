@@ -51,7 +51,7 @@ class CRM_Civiquickfile_Base {
   }
 
   /**
-  * Get Xero Setting
+  * Get Quickfile Setting
   * @param String $var
   * @return Ambigous <multitype:, number, unknown>
   */
@@ -60,7 +60,7 @@ class CRM_Civiquickfile_Base {
   }
 
   /**
-   * Convert date to form expected by Xero
+   * Convert date to form expected by Quickfile
    * @param String $date date in mysql format (since it is coming through the api)
    * @return string formatted date
    */

@@ -5,12 +5,13 @@
 
   Project Name: PHP Quickfile
   Class Name: Quickfile
-  Author: Jonathan Richardson, Oldskoolhouse (dependent on the work of others, mainly David Pitman - see below)
+  Author: Jonathan Richardson, Oldskoolhouse (dependent on the work of others - see below)
   Date: Jan 2015
 
   Description:
-  A class for interacting with the Quick File (quickfile.co.uk) application API.  More documentation for Quick File can be found at http://api.quickfile.co.uk/
+  A class for interacting with the QuickFile (quickfile.co.uk) application API.  More documentation for QuickFile can be found at http://api.quickfile.co.uk/
 
+  Thanks to the work of David Pitman on PHPXero classes https://github.com/drpitman/PHP-Xero
   ---
 
   License:
@@ -21,7 +22,7 @@
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
 
@@ -165,10 +166,10 @@ class ArrayToXML {
 
     /**
      * The main function for converting to an XML document.
-     * Pass in a multi dimensional array and this recrusively loops through and builds up an XML document.
+     * Pass in a multi dimensional array and this recursively loops through and builds up an XML document.
      *
      * @param array $data
-     * @param string $rootNodeName - what you want the root node to be - defaultsto data.
+     * @param string $rootNodeName - what you want the root node to be - defaults to data.
      * @param SimpleXMLElement $xml - should only be used recursively
      * @return string XML
      */

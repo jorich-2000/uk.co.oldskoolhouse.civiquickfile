@@ -4,7 +4,7 @@ class CRM_Civiquickfile_Invoice extends CRM_Civiquickfile_Base {
   protected $_plugin = 'quickfile';
 
   /**
-   * pull contacts from Xero and store them into civicrm_account_contact
+   * pull contacts from Quickfile and store them into civicrm_account_contact
    * We call the civicrm_accountPullPreSave hook so other modules can alter if required
    *
    * @param array $params
@@ -90,7 +90,7 @@ class CRM_Civiquickfile_Invoice extends CRM_Civiquickfile_Base {
   }
 
   /**
-   * push contacts to Xero from the civicrm_account_contact with 'needs_update' = 1
+   * push contacts to Quickfile from the civicrm_account_contact with 'needs_update' = 1
    * We call the civicrm_accountPullPreSave hook so other modules can alter if required
    *
    * @param array $params
@@ -127,7 +127,7 @@ class CRM_Civiquickfile_Invoice extends CRM_Civiquickfile_Base {
         $responseErrors = $this->validateResponse($result);
         if($responseErrors) {
           if(in_array('Invoice not of valid status for modification', $responseErrors)) {
-            // we can't update in Xero as it is approved or voided so let's not keep trying
+            // we can't update in Quickfile as it is approved or voided so let's not keep trying
             $record['accounts_needs_update'] = 0;
           }
           $record['error_data'] = json_encode($responseErrors);
@@ -272,7 +272,7 @@ if ($search) {
   }
 
   /**
-   * Map Xero Status values against CiviCRM status values
+   * Map Quickfile Status values against CiviCRM status values
    *
    */
   function mapStatus($status) {
@@ -289,7 +289,7 @@ if ($search) {
 
   /**
    * Validate an invoice by checking the tracking category exists (if set)
-   * @param array $invoice array ready for Xero
+   * @param array $invoice array ready for Quickfile
    */
   function validatePrerequisites($invoice){
     if(empty($invoice['LineItems'])) {
